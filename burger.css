@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Стиль меню */
+.burger-menu {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+
+/* Изменение курсора */
+.burger-icon {
+    cursor: pointer;
+}
+
+/* Три полосы */
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+}
+
+/* Стиль текстовой панели */
+.menu-panel {
+    background-color: #8e4242;
+    padding: 10px;
+    border-radius: 5px;
+
+    
+    position: absolute;
+    top: 80px;
+    left: 100px;
+    width: 20%;
+    text-align: center;
+    /*display: none; */
+
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.menu-panel.show-menu{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.menu-panel ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-panel li {
+    margin-bottom: 10px;
+}
+
+.menu-panel a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}

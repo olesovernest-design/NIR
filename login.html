@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<style>
+    body{
+        padding-left: 50%;
+        font-size: 25px;
+    }
+ input{
+     width: 250px;
+     height: 40px;
+     font-size: 30px;
+     background-color: rgba(240, 248, 255, 0.674);
+     border-radius: 10px;
+    }
+
+    .pp{
+        font-size: 18px;
+        font-style: italic;
+        align-items: center;
+    }
+    .ppi{
+        width: 25px;
+        height: 25px;
+        background-color: rgba(159, 79, 233, 0.708);
+    }
+</style>
+
+<script>
+    function checkPassword(){
+        var password = document.getElementById("passwordBox");
+        var psd = password.value;
+
+        if (psd == "altan"){
+            return true;
+        }
+        else{
+            alert("Доступ запрещен! Неверный пороль");
+            return false
+        }
+    }
+
+    function showPassword(){
+        var password = document.getElementById("passwordBox");
+        if (password.type == "password"){
+            password.type = "text"
+        }
+        else{
+            password.type = "password"
+        }
+    }
+
+</script>
+
+<body>
+    <h1 style="color: rgb(193, 187, 187); padding-top: 200px;"  >Авторизация</h1>
+    <p>Для входа введите пароль</p>
+    <p>Пароль: <input type="password" id="passwordBox">    </p>
+    <p class="pp"> <input class="ppi" type="checkbox" onclick="showPassword();">  отобразить пороль</p>
+    <a href="./index.html" onclick="return checkPassword(); " >Жми сюда</a>
+</body>
+</html>
